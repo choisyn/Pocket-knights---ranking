@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>阵容&英雄使用统计（纯前端版）</title>
+<link rel="stylesheet" href="formation.css">   <!-- 把原来 style 标签内容搬出去 -->
+</head>
+<body>
+<div id="loading" class="loading"><span class="txt">加载中…</span></div>
+
+<div class="container">
+  <h1>阵容 & 英雄使用统计</h1>
+
+  <form id="filterForm" class="filter">
+    <div class="filter-card">
+        区服范围：
+        <input type="number" name="zs" min="1" max="999" value="1"> 区 ～
+        <input type="number" name="ze" min="1" max="999" value="10"> 区
+        &nbsp;&nbsp; zone：
+        <label><input type="checkbox" name="zone[]" value="0" checked> 0</label>
+        <label><input type="checkbox" name="zone[]" value="1"> 1</label>
+        <label><input type="checkbox" name="zone[]" value="2"> 2</label>
+        <label><input type="checkbox" name="zone[]" value="3"> 3</label>
+        <label><input type="checkbox" name="zone[]" value="4"> 4</label>
+        <label><input type="checkbox" name="zone[]" value="5"> 5</label>
+        <button type="submit">查询</button>
+        <label style="margin-left:12px;font-size:14px;">
+          <input type="checkbox" id="mergeSwitch"> 合并相同英雄
+        </label>
+    </div>
+  </form>
+
+  <div class="content">
+    <div class="left card">
+      <h2>阵容统计</h2>
+      <table id="formationTable"><tbody></tbody></table>
+    </div>
+    <div class="right card">
+      <h2>英雄出场统计</h2>
+      <div id="heroGrid" class="hero-grid"></div>
+    </div>
+  </div>
+</div>
+
+<script src="formation.js"></script>
+</body>
+</html>
