@@ -5,7 +5,7 @@
 $db_host = 'localhost';     // 数据库主机
 $db_name = 'rank_ddata'; // 数据库名
 $db_user = 'rank_ddata'; // 数据库用户名
-$db_pass = 'Pj5hhsH6jxWkRjfN'; // 数据库密码
+$db_pass = ''; // 数据库密码
 $db_charset = 'utf8mb4';    // 数据库字符集
 
 $dsn = "mysql:host=$db_host;dbname=$db_name;charset=$db_charset";
@@ -23,4 +23,5 @@ try {
     error_log($e->getMessage());
     // exit('数据库连接失败，请稍后再试。');
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
+
 }
