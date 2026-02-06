@@ -1,8 +1,8 @@
 <?php
-/* 1. 建立 PDO 连接（与你之前详情页里完全一致） */
+/* 1. 建立 PDO 连接（与之前详情页里完全一致） */
 $dsn  = 'mysql:host=localhost;dbname=rank_ddata;charset=utf8mb4';
 $user = 'rank_ddata';
-$pass = 'Pj5hhsH6jxWkRjfN';
+$pass = '';
 
 try {
     $pdo = new PDO($dsn, $user, $pass, [
